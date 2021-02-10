@@ -1,0 +1,24 @@
+
+.navbar{
+    background-color: rgb(018, 018, 018);
+    color: white;
+}
+
+.container-fluid{
+   
+}
+
+.x{
+    padding: 0.25rem;
+    margin: 0px;
+    position: relative;
+    min-height: 3.5rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.dropdawn-menu{
+    background-color: rgb(018, 018, 018);
+    
+}
