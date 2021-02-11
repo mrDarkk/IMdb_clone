@@ -1,19 +1,19 @@
 import React from 'react';
-import './Main.css';
-import SideBarBox from './SideBarBox';
-import Carousel from './Carousel';
+import './MainBox.css';
+// import SideBarBox from './SideBarBox';
+// import Carousel from './Carousel';
 
-function Main() {
+function MainBox() {
 
     return (
         <>
             <div>
                 <div className="carosel-container">
-                    <Carousel/>
+                    {/* <Carousel/> */}
                 </div>
                 <div className="side-bar">
                     <div className="side-bar-upper">Up Next</div>
-                    <SideBarBox/>
+                    {/* <SideBarBox/> */}
                     <div className="side-bar-bottom">Brouse trailers </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@ function Main() {
     )
 }
 
-export default Main;
+export default MainBox;
 
 
 
