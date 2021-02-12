@@ -21,3 +21,31 @@ IMDb originated with a Usenet posting by British film fan and computer programme
 
 In 1998, Jeff Bezos, founder, owner, and CEO of Amazon.com, struck a deal with Needham and other principal shareholders to buy IMDb outright for approximately \$55 million and attach it to Amazon as a subsidiary, private company. This gave IMDb the ability to pay the shareholders salaries for their work, while Amazon.com would be able to use IMDb as an advertising resource for selling DVDs and videotapes.
 
+# Paths/EndPoints:
+
+### ``/`` (home public)
+
+- ``GET``  ``/api/test/all`` -  public home page
+
+
+### ``/ ``( admin auth api)
+
+- ``GET`` ``/api/test/admin`` - admin home page
+
+### ``/`` (auth api)
+
+- ``POST`` ``/api/auth/signup `` - user can signup
+- ``POST`` ``/api/auth/signin`` - user can signin 
+
+###  ``/user`` (only logged in user can access)
+
+- ``GET``  ``/api/test/user`` - user home page after login
+
+
+###  ``/user`` (user cart)
+
+- ``GET``  ``/cart`` - get all cart data
+- ``POST`` ``/cart`` - new new cart data
+- ``POST`` ``/cart-delete-item`` - remove from cart 
+
+
