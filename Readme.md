@@ -23,12 +23,16 @@ In 1998, Jeff Bezos, founder, owner, and CEO of Amazon.com, struck a deal with N
 
 # Paths/EndPoints:
 
+## demo link
+
+!https://imdb-7backend.herokuapp.com
+
 ### ``/`` (home public)
 
 - ``GET``  ``/api/test/all`` -  public home page
 
 
-### ``/ ``( admin auth api)
+### ``/ ``( only logged in admin can access)
 
 - ``GET`` ``/api/test/admin`` - admin home page
 
@@ -38,7 +42,7 @@ In 1998, Jeff Bezos, founder, owner, and CEO of Amazon.com, struck a deal with N
 - ``POST`` ``/api/auth/signin`` - user can signin 
 
 
-###  ``/user`` (only logged in user can access)
+###  ``/`` (only logged in user can access)
 
 - ``GET``  ``/api/test/user`` - user home page after login
 
