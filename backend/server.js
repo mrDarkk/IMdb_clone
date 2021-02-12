@@ -37,9 +37,9 @@ app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
 require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);
+require('./app/routes/movies.routes')(app);
 
 // simple route
 app.get("/", (req, res) => {
