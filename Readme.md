@@ -20,3 +20,4 @@ According to wikipedia, as of May 2019, IMDb has approximately 6 million titles 
 IMDb originated with a Usenet posting by British film fan and computer programmer Col Needham entitled "Those Eyes", about actresses with beautiful eyes. Others with similar interests soon responded with additions or different lists of their own.
 
 In 1998, Jeff Bezos, founder, owner, and CEO of Amazon.com, struck a deal with Needham and other principal shareholders to buy IMDb outright for approximately \$55 million and attach it to Amazon as a subsidiary, private company. This gave IMDb the ability to pay the shareholders salaries for their work, while Amazon.com would be able to use IMDb as an advertising resource for selling DVDs and videotapes.
+
