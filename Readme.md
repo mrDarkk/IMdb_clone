@@ -37,15 +37,9 @@ In 1998, Jeff Bezos, founder, owner, and CEO of Amazon.com, struck a deal with N
 - ``POST`` ``/api/auth/signup `` - user can signup
 - ``POST`` ``/api/auth/signin`` - user can signin 
 
+
 ###  ``/user`` (only logged in user can access)
 
 - ``GET``  ``/api/test/user`` - user home page after login
-
-
-###  ``/user`` (user cart)
-
-- ``GET``  ``/cart`` - get all cart data
-- ``POST`` ``/cart`` - new new cart data
-- ``POST`` ``/cart-delete-item`` - remove from cart 
 
 
