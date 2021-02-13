@@ -27,7 +27,13 @@ db.sequelize = sequelize;
 db.user = require("../models/user.model.js")(sequelize, Sequelize);
 db.role = require("../models/role.model.js")(sequelize, Sequelize);
 db.movies = require("../models/movies.model.js")(sequelize, Sequelize);
+db.review = require("../models/review.model.js")(sequelize, Sequelize);
 
+db.movies.hasMany(db.review, { as: "review" });
+db.review.belongsTo(db.movies, {
+  foreignKey: "movieId",
+  as: "movies",
+});
 
 db.role.belongsToMany(db.user, {
   through: "user_roles",

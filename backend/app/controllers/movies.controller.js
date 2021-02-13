@@ -1,5 +1,6 @@
 const db = require("../models");
 const Movies = db.movies;
+const Review = db.review;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Tutorial
@@ -14,6 +15,7 @@ exports.create = (req, res) => {
   
     // Create a Tutorial
     const movies = {
+      id: req.body.id,
       title: req.body.title,
       description: req.body.description,
       published: req.body.published ? req.body.published : false
@@ -32,6 +34,62 @@ exports.create = (req, res) => {
       });
   };
 
+
+
+  // exports.createReview = (req, review) => {
+  //   return Review.create({
+  //     name: review.name,
+  //     text: review.text,
+  //     moviesId: req.params.id,
+  //   })
+  //     .then((review) => {
+  //       console.log(">> Created review: " + JSON.stringify(review, null, 4));
+  //       return review;
+  //     })
+  //     .catch((err) => {
+  //       console.log(">> Error while creating review: ", err);
+  //     });
+  // };
+
+  exports.createReview = (req, res) => {
+    // Validate request
+    if (!req.body.name) {
+      res.status(400).send({
+        message: "name can not be empty!"
+      });
+      return;
+    }
+  
+    // Create a Tutorial
+    const review = {
+      movieId: req.body.movieId,
+      name: req.body.name,
+      text: req.body.text,
+    };
+  
+    // Save Tutorial in the database
+    Review.create(review)
+      .then(data => {
+        res.send(data);
+      })
+      .catch(err => {
+        res.status(500).send({
+          message:
+            err.message || "Some error occurred while creating the Movies."
+        });
+      });
+  };
+
+
+  // Get all Movies include comments
+exports.findAllReview = () => {
+  return Movies.findAll({
+    include: ["review"],
+  }).then((movies) => {
+    return movies;
+  });
+};
+
 // Retrieve all Tutorials from the database.
 exports.findAll = (req, res) => {
     const title = req.query.title;
@@ -48,6 +106,22 @@ exports.findAll = (req, res) => {
         });
       });
   };
+
+
+  // Find a single Movies with an id
+exports.findOneWithReview = (req, res) => {
+  const id = req.params.id;
+
+  Movies.findByPk(id, { include: ["review"] })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: "Error retrieving Movies with id=" + id
+      });
+    });
+};
 
 // Find a single Movies with an id
 exports.findOne = (req, res) => {

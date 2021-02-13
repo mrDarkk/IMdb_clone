@@ -1,5 +1,9 @@
 module.exports = (sequelize, Sequelize) => {
     const Movies = sequelize.define("movies", {
+      id: {
+        type: Sequelize.INTEGER,
+        primaryKey: true
+      },
       title: {
         type: Sequelize.STRING
       },
