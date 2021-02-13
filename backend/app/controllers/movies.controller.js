@@ -49,27 +49,97 @@ exports.findAll = (req, res) => {
       });
   };
 
-// Find a single Tutorial with an id
+// Find a single Movies with an id
 exports.findOne = (req, res) => {
-  
+  const id = req.params.id;
+
+  Movies.findByPk(id)
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: "Error retrieving Movies with id=" + id
+      });
+    });
 };
 
-// Update a Tutorial by the id in the request
+// Update a Movies by the id in the request
 exports.update = (req, res) => {
-  
+  const id = req.params.id;
+
+  Movies.update(req.body, {
+    where: { id: id }
+  })
+    .then(num => {
+      if (num == 1) {
+        res.send({
+          message: "Movies was updated successfully."
+        });
+      } else {
+        res.send({
+          message: `Cannot update Movies with id=${id}. Maybe Movies was not found or req.body is empty!`
+        });
+      }
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: "Error updating Movies with id=" + id
+      });
+    });
 };
 
 // Delete a Tutorial with the specified id in the request
 exports.delete = (req, res) => {
-  
+  const id = req.params.id;
+
+  Movies.destroy({
+    where: { id: id }
+  })
+    .then(num => {
+      if (num == 1) {
+        res.send({
+          message: "Movies was deleted successfully!"
+        });
+      } else {
+        res.send({
+          message: `Cannot delete Movies with id=${id}. Maybe Movies was not found!`
+        });
+      }
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: "Could not delete Tutorial with id=" + id
+      });
+    });
 };
 
 // Delete all Tutorials from the database.
 exports.deleteAll = (req, res) => {
-  
+  Movies.destroy({
+    where: {},
+    truncate: false
+  })
+    .then(nums => {
+      res.send({ message: `${nums} Movies were deleted successfully!` });
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while removing all Movies."
+      });
+    });
 };
-
 // Find all published Tutorials
 exports.findAllPublished = (req, res) => {
-  
+  Movies.findAll({ where: { published: true } })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving Movies."
+      });
+    });
 };
