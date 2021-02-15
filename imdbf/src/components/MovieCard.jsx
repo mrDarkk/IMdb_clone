@@ -1,22 +1,19 @@
 import React from 'react';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { Card, Button } from 'react-bootstrap';
 import './style.css';
 
 function MovieCard() {
     return (
         <>
-            <div class="container mt-5 " >
-
-                <div class="card movie_card ">
-                    <img src="https://www.joblo.com/assets/images/joblo/posters/2019/02/Dyow9RgX4AElAGN.jpg" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <i class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Play Trailer">
-                        </i>
-                        <h5 class="card-title">Toy Story 4</h5>
-                        <span class="movie_info">2019</span>
-                        <span class="movie_info float-right"><i class="fas fa-star"></i> 9 / 10</span>
-                    </div>
-                </div>
+            <div className="movie-card" style={{ width: '16rem', height:'21rem', backgroundColor:'black' }}>
+                {/* <Card style={{ width: '18rem' }}> */}
+                    <Card.Img variant="top" src="https://www.joblo.com/assets/images/joblo/posters/2018/11/Spider-Verse-poster-1.jpg" />
+                    <Card.Body>
+                        <Card.Title>Card Title</Card.Title>
+                        <Button>Go somewhere</Button>
+                    </Card.Body>
+                {/* </Card> */}
             </div>
         </>
     )
