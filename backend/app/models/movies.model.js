@@ -4,6 +4,9 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.INTEGER,
         primaryKey: true
       },
+      img: {
+        type: Sequelize.STRING
+      },
       title: {
         type: Sequelize.STRING
       },
@@ -11,7 +14,7 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.STRING
       },
       published: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.STRING
       }
     });
   
