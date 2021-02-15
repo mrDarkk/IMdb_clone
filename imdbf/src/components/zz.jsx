@@ -1,4 +1,4 @@
-  {/* <div class="card movie_card">
+{/* <div class="card movie_card">
                     <img src="https://www.joblo.com/assets/images/joblo/posters/2019/02/captin-marvel-poster-international.jpg" class="card-img-top" alt="..." />
                     <div class="card-body">
                         <i class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Play Trailer">
@@ -9,7 +9,7 @@
                     </div>
                 </div> */}
 
-                {/* <div class="card movie_card">
+{/* <div class="card movie_card">
                     <img src="https://www.joblo.com/assets/images/joblo/posters/2019/01/Spider-Man-Far-From-Home-poster-1.jpg" class="card-img-top" alt="..." />
                     <div class="card-body">
                         <i class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Play Trailer">
@@ -20,7 +20,7 @@
                     </div>
                 </div> */}
 
-                {/* <div class="card movie_card " >
+{/* <div class="card movie_card " >
                     <img src="https://www.joblo.com/assets/images/joblo/posters/2019/01/Alita-character-poster-1.jpg" class="card-img-top" alt="..." />
                     <div class="card-body">
                         <i class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Play Trailer">
@@ -31,7 +31,7 @@
                     </div>
                 </div> */}
 
-                {/* <div class="card movie_card">
+{/* <div class="card movie_card">
                     <img src="https://www.joblo.com/assets/images/joblo/posters/2018/11/Spider-Verse-poster-1.jpg" class="card-img-top" alt="..." />
                     <div class="card-body">
                         <i class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Play Trailer">

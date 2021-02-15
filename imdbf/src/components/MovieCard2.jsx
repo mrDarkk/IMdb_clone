@@ -11,9 +11,9 @@ function MovieCard2() {
                 <div class="movie-header manOfSteel">
                     <img class="card2-img" src="http://henrycavill.org/images/Films/2013-Man-of-Steel/posters/3-Walmart-Superman-a.jpg " alt=".." />
                     <div class="header-icon-container">
-                        <a href="#">
+                        {/* <a href="#">
                             <i class="material-icons header-icon"></i>
-                        </a>
+                        </a> */}
                     </div>
                 </div>
                 <div class="movie-content">
