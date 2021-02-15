@@ -1,0 +1,47 @@
+.header{
+    background-color: #22254b;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.header__logo{
+    width: 100px;
+    margin: 0 50px;
+    object-fit: contain;
+}
+.search{
+    display: flex;
+    flex: 1;
+}
+
+.header__searchIcon{
+    padding: 5px;
+    height: 22px !important;
+    background-color: black;
+}
+.header__nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+.Menu{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-right: 50px;
+}
+.menuicon{
+    padding: 5px;
+    height: 22px !important;
+}
+.header__option{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 50px;
+}
+.header_optionLineOne{
+    font-size: 13px;
+    font-weight: 800;
+}
