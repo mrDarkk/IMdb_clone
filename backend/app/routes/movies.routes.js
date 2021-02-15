@@ -1,11 +1,12 @@
 module.exports = app => {
     // const movies = require("../controllers/movies.controller");
+    const { authJwt } = require("../middleware");
     const movies = require("../controllers/movies.controller");
   
     var router = require("express").Router();
   
     // Create a new movies
-    router.post("/", movies.create);
+    router.post("/",[authJwt.verifyToken, authJwt.isAdmin], movies.create);
 
     router.post("/review", movies.createReview);
 
@@ -23,13 +24,13 @@ module.exports = app => {
   router.get("/withreview/:id", movies.findOneWithReview);
 
   // Update a movies with id
-  router.put("/:id", movies.update);
+  router.put("/:id",[authJwt.verifyToken, authJwt.isAdmin], movies.update);
 
   // Delete a movies with id
-  router.delete("/:id", movies.delete);
+  router.delete("/:id",[authJwt.verifyToken, authJwt.isAdmin], movies.delete);
 
   // delete all
-  router.delete("/", movies.deleteAll);
+  router.delete("/",[authJwt.verifyToken, authJwt.isAdmin], movies.deleteAll);
   
 
     

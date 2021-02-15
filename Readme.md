@@ -31,19 +31,44 @@ In 1998, Jeff Bezos, founder, owner, and CEO of Amazon.com, struck a deal with N
 
 - ``GET``  ``/api/test/all`` -  public home page
 
+- ``GET``  ``/api/movies/`` - get movies list
+
+- ``POST``  ``/api/movies/review`` - add  movies review
+
+- ``GET``  ``api/movies/withreview/:id`` - get movies with reviews
+
 
 ### ``/ ``( only logged in admin can access)
 
 - ``GET`` ``/api/test/admin`` - admin home page
 
+- ``POST``  ``/api/movies/`` - add new movies 
+
+- ``PUT``  ``/api/movies/:id`` - update movies 
+
+- ``DElETE``  ``/api/movies/:id`` - delete  movies 
+
+- ``DElETE``  ``/api/movies/`` - delete  all movies 
+
 ### ``/`` (auth api)
 
 - ``POST`` ``/api/auth/signup `` - user can signup
+
 - ``POST`` ``/api/auth/signin`` - user can signin 
 
 
 ###  ``/`` (only logged in user can access)
 
 - ``GET``  ``/api/test/user`` - user home page after login
+
+- ``GET``  ``/api/movies/`` - get movies list
+
+- ``POST``  ``/api/movies/review`` - add  movies review
+
+- ``GET``  ``api/movies/withreview/:id`` - get movies  with reviews using movies id
+
+
+
+
 
 
