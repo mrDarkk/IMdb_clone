@@ -1,6 +1,6 @@
 module.exports = app => {
     // const movies = require("../controllers/movies.controller");
-    const { authJwt } = require("../middleware");
+    const { authJwt } = require("../middleware"); 
     const movies = require("../controllers/movies.controller");
   
     var router = require("express").Router();

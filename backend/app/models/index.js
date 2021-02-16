@@ -28,7 +28,7 @@ db.user = require("../models/user.model.js")(sequelize, Sequelize);
 db.role = require("../models/role.model.js")(sequelize, Sequelize);
 db.movies = require("../models/movies.model.js")(sequelize, Sequelize);
 db.review = require("../models/review.model.js")(sequelize, Sequelize);
-db.actor = require("../models/actor.model.js")(sequelize, Sequelize);
+// db.actor = require("../models/actor.model.js")(sequelize, Sequelize);
 
 db.movies.hasMany(db.review, { as: "review" });
 db.review.belongsTo(db.movies, {
@@ -36,17 +36,17 @@ db.review.belongsTo(db.movies, {
   as: "movies",
 });
 
-db.movies.belongsToMany(db.actor, {
-  through: "movie_actor",
-  as: "actor",
-  foreignKey: "movie_id",
-});
+// db.movies.belongsToMany(db.actor, {
+//   through: "movie_actor",
+//   as: "actor",
+//   foreignKey: "movie_id",
+// });
 
-db.actor.belongsToMany(db.movies, {
-  through: "movie_actor",
-  as: "movies",
-  foreignKey: "actor_id",
-});
+// db.actor.belongsToMany(db.movies, {
+//   through: "movie_actor",
+//   as: "movies",
+//   foreignKey: "actor_id",
+// });
 
 db.role.belongsToMany(db.user, {
   through: "user_roles",
