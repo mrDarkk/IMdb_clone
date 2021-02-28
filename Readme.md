@@ -1,12 +1,4 @@
-# Milestone-9: IMDb
-
-## Learning competencies:
-
-At the end of this milestone you will learn
-
-- Maintaining application state using Redux
-- Using third party components in React
-- Understanding Relational databases
+# IMDb
 
 ## Problem statement:
 
